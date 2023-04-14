@@ -1,0 +1,50 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "jim",
+    "password": "jim"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "jim",
+    "password": "jim"
+}
+
+###
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmFlZTlkYTQ0OTFkZjYzY2YzOGM0M2UiLCJpYXQiOjE2NTU2MzAyOTh9.01hgRs9TuihXyy5Xzy-hUF5dIebmC48nuhJS1D_7wis
+
+{
+    "title": "HTML",
+    "description": "Html/CSS",
+    "url": "w3schools.com",
+    "status": "LEARNED"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmFlZTlkYTQ0OTFkZjYzY2YzOGM0M2UiLCJpYXQiOjE2NTU2MzAyOTh9.01hgRs9TuihXyy5Xzy-hUF5dIebmC48nuhJS1D_7wis
+
+###
+PUT http://localhost:5000/api/posts/62aeea044491df63cf38c440
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmFlZTlkYTQ0OTFkZjYzY2YzOGM0M2UiLCJpYXQiOjE2NTU2MzAyOTh9.01hgRs9TuihXyy5Xzy-hUF5dIebmC48nuhJS1D_7wis
+
+{
+    "title": "Vue",
+    "description": "Vueeee",
+    "url": "https://vue.org",
+    "status": "TO LEARN"
+}
+
+###
+DELETE http://localhost:5000/api/posts/62aeeefb7c55c3dba1cca579
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MmFlZTlkYTQ0OTFkZjYzY2YzOGM0M2UiLCJpYXQiOjE2NTU2MzAyOTh9.01hgRs9TuihXyy5Xzy-hUF5dIebmC48nuhJS1D_7wis
